@@ -9,4 +9,5 @@ def blog_view(request):
 
 
 def blog_single(request):
-    return render(request, 'blog/blog-single.html')
+    context = {'title': 'Blog Title', 'content': 'This is the content of the blog post.'}
+    return render(request, 'blog/blog-single.html', context)
